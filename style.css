@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 90%;
+}
+body{
+    color: #444444;
+    line-height: 100%;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+nav.nav{
+    background-color: #ffffff;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    height: 70px;
+
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+nav.nav .logo{
+    font-weight: bold;
+}
+nav.nav ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav.nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+nav .actions ul li a{
+    border-radius: 5px;
+    background-color: #f5c977;
+    padding: 8px 16px;
+    color: #444444;
+    text-decoration: none;
+    margin: 0;
+    display: inline-block;
+    transition: .3s;
+}
+nav .actions ul li a:hover{
+    color: #444444;
+    box-shadow: #caa662 0px 3px 8px;
+}
+nav .actions ul li a.register{
+    background-color: #f59477;
+}
+nav .actions ul li a.open-menu {
+    padding: 4px;
+    transform: scaleX(-1);
+    background: none;
+}
+nav .actions ul li a.open-menu:hover{
+    box-shadow: none;
+}
+nav .actions ul li a.close-menu {
+    padding: 4px;
+    transform: scaleX(-1);
+    background: none;
+}
+nav .actions ul li a.close-menu:hover{
+    box-shadow: none;
+}
+.home-slider{
+    height: calc(100vh - 150px);
+    background-color: #eee;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide{
+    width: 25vw;
+    height: 25vw;
+    min-width: 270px;
+    min-height: 270px;
+    aspect-ratio: 1/1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.slide img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateZ(-5deg);
+    animation: animateProduct 7s ease-in-out infinite alternate;
+    width: 130%;
+}
+.slide:before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: #f5c977;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.order-now{
+    border-radius: 5px;
+    background-color: #f5c977;
+    padding: 12px 18px;
+    color: #444444;
+    text-decoration: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+    transition: .3s;
+    border: none;
+}
+.order-now:hover{
+    color: #444444;
+    box-shadow: #caa662 0px 3px 8px;
+}
+
+.product-card{
+    border:1px solid #eee;
+    padding: 8px;
+}
+.product-card .thumbnail{
+    background-color: #eee;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 16px;
+    position: relative;
+}
+.product-card .thumbnail img{
+    max-height: 100%;
+    max-width: 100%;
+    padding: 16px;
+}
+.product-card .details h3{
+    font-size: 1.3rem;
+    color: #444444;
+}
+.product-card .details p{
+    font-size: 1rem;
+    color: #444444;
+}
+.product-card .thumbnail .price{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: block;
+    color: #eee;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    width: fit-content;
+    background-color: red;
+    height: auto;
+    padding: 5px;
+    z-index: 1;
+    border-bottom-left-radius: 8px;
+}
+.product-card .thumbnail .price .price-symbole{
+    font-size: .7rem;
+    line-height: .7rem;
+}
+.product-card .details .order-now{
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+}
+.banner{
+    background-color: #f5c977;
+    min-height: 150px;
+}
+footer{
+    background-color: #f5c977;
+
+}
+.footer-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-links li{
+    display: inline-block;
+}
+.footer-links li a{
+    /* text-decoration: none; */
+    color: #444444;
+}
+
+.mega-menu{
+    position: fixed;
+    background-color: #fffffff1;
+    top: 70px;
+    left: 0;
+    right: 32px;
+    bottom: 0;
+    transform: translateX(-120%);
+    transition: .3s;
+}
+.mega-menu.open{
+    transform: translateX(0%);
+    box-shadow: #664d033f 10px 10px 10px;
+}
+.mega-menu .col-auto{
+    height: fit-content;
+    margin: auto;
+}
+
+.mega-menu a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 16px;
+}
+.mega-menu a:hover{
+    color: #444444;
+    box-shadow: #caa662 0px 3px 8px;
+}
+.mega-menu a.login{
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: #444444;
+    text-decoration: none;
+    margin: 0;
+    margin-bottom: 16px;
+    display: inline-block;
+    transition: .3s;
+    background-color: #f5c977;
+}
+.mega-menu a.register{
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: #444444;
+    text-decoration: none;
+    margin: 0;
+    display: inline-block;
+    transition: .3s;
+    background-color: #f59477;
+}
+.mega-menu a.open-menu {
+    padding: 4px;
+    transform: scaleX(-1);
+    background: none;
+}
+.mega-menu a.open-menu:hover{
+    box-shadow: none;
+}
+.mega-menu a.close-menu {
+    padding: 4px;
+    transform: scaleX(-1);
+    background: none;
+}
+.mega-menu a.close-menu:hover{
+    box-shadow: none;
+}
+.product-details .title{
+    margin-bottom: 16px;
+    display: block;
+}
+.product-details .description{
+    margin-bottom: 16px;
+    display: block;
+}
+.product-details .price{
+    display: block;
+    font-size: 3rem;
+    line-height: 3rem;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+.order-form{
+    background-color: #eeeeee70;
+    border: 1px solid #eee;
+    padding: 8px;
+}
+.order-form .note{
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 16px;
+}
+
+/*
+* Animations
+*/
+@keyframes animateProduct {
+    from {transform: translateX(-50%) translateY(-50%) rotateZ(5deg);}
+    to {transform: translateX(-50%) translateY(-49%) rotateZ(-5deg);}
+}

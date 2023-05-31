@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakhaama - Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="row w-100 m-0 align-items-center justify-content-between">
+                <div class="col">
+                    <div class="logo">FAKHAMA</div>
+                </div>
+                <div class="col d-md-block d-none">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="./index.html">Accueil</a></li>
+                            <li><a href="./shop.html">Boutique</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="actions">
+                        <ul class="justify-content-end">
+                            <li class="d-none d-md-block"><a href="./login.html" class="login ms-2">Connexion</a></li>
+                            <li class="d-none d-md-block"><a href="./register.html" class="register ms-2">S'inscrire</a>
+                            </li>
+                            <li class="d-md-none">
+                                <a class="open-menu">
+                                    <svg width="30px" height="30px" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none">
+                                        <path fill="#000000" fill-rule="evenodd"
+                                            d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z" />
+                                    </svg>
+                                </a>
+                                <a class="close-menu" style="display: none;">
+                                    <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                                            fill="#0F1729" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="lux">
+            <div class="banner mb-5">
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center">
+                            <h2>Fakhaama Produit</h2>
+                            <p>une symphonie parfumée d'élégance et d'opulence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container pb-2">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mb-5">
+                        <div class="product-card">
+                            <div class="thumbnail p-0 m-0">
+                                <img src="https://www.lovebeautyandplanet.com/content/dam/unilever/love_beauty_and_planet/united_states_of_america/pack_shot/coconut_mimosa_shampoo_bop-2079225-png.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="product-details text-center text-md-start">
+                            <h1 class="title">Beauty & planet parfum</h1>
+                            <p class="description">Les parfums et ouds orientaux les plus luxueux et les plus élégants
+                                qui ajoutent une
+                                touche de beauté et d'élégance pour vous donner un look distingué</p>
+                            <span class="price">350<span class="price-symbole">MAD</span></span>
+                            <form action="./order-confirm.html" class="order-form">
+                                <div class="note">Remplissez le formulaire pour passer une commande</div>
+                                <div class="row">
+                                    <div class="mb-3 col-md-6">
+                                        <label for="name" class="form-label">Nom complet:</label>
+                                        <input type="text" class="form-control" id="name" aria-describedby="name">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="phone" class="form-label">Téléphone:</label>
+                                        <input type="tel" class="form-control" id="phone">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="city" class="form-label">Ville:</label>
+                                        <input type="text" class="form-control" id="city">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="address" class="form-label">Adresse:</label>
+                                        <input type="text" class="form-control" id="address">
+                                    </div>
+                                    <div class="mb-3 col-12">
+                                        <label for="note" class="form-label">Note:</label>
+                                        <textarea id="note" class="form-control" rows="5"></textarea>
+                                    </div>
+                                    <div class="mb-3 col-12">
+                                        <button type="submit" class="order-now w-100">Commander</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-breif py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos iure quisquam deleniti
+                            placeat sit, repellendus in, error fugit assumenda, repudiandae culpa. Non ipsam iure
+                            numquam? Nulla perspiciatis laboriosam nesciunt quasi?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card text-dark">
+                            <div class="card-body p-4">
+                                <h4 class="mb-0">Avis clients sur le produit</h4>
+                                <p class="fw-light mb-4 pb-2">Témoignages élogieux de satisfaction et d'expériences enchantées</p>
+                                <div class="d-flex flex-start"><img class="rounded-circle shadow-1-strong me-3" src="https://eu.ui-avatars.com/api/?name=Emma+L&size=250" alt="avatar" width="60" height="60"><div>
+                                        <h6 class="fw-bold mb-1">Emma L</h6>
+                                        <div class="d-flex align-items-center mb-3"><p class="mb-0">March 07, 2021</p></div>
+                                        <p class="mb-0">
+                                            Absolument fascinant! Ces parfums et ouds orientaux sont l'incarnation du luxe et de l'élégance. Ils élèvent sans effort votre style, vous laissant avec une aura distinguée qu'il est impossible d'ignorer. Hautement recommandé
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex flex-start"><img class="rounded-circle shadow-1-strong me-3" src="https://eu.ui-avatars.com/api/?name=Sophia+M&size=250" alt="avatar" width="60" height="60"><div>
+                                        <h6 class="fw-bold mb-1">Sophia M</h6>
+                                        <div class="d-flex align-items-center mb-3"><p class="mb-0">March 07, 2021</p></div>
+                                        <p class="mb-0">
+                                            Je ne me lasse pas de ces luxueux parfums orientaux et ouds ! Ils sont devenus mes incontournables pour toutes les occasions spéciales. Les parfums sont riches, captivants et incroyablement durables. Préparez-vous à recevoir des compliments sans fin sur votre parfum raffiné et distingué
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lux">
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center">
+                            <h2>Produit associé</h2>
+                            <p>Autres produits que vous pourriez également aimer acheter</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="container pb-2">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-5">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <span class="price">350<span class="price-symbole">MAD</span></span>
+                                <img src="https://www.lovebeautyandplanet.com/content/dam/unilever/love_beauty_and_planet/united_states_of_america/pack_shot/coconut_mimosa_shampoo_bop-2079225-png.png"
+                                    alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Beauty & planet parfum</h3>
+                                <p>Les parfums et ouds orientaux les plus luxueux et les plus élégants qui ajoutent une
+                                    touche de beauté et d'élégance pour vous donner un look distingué</p>
+                                <a href="./product.html" class="order-now">Commandez maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <span class="price">350<span class="price-symbole">MAD</span></span>
+                                <img src="https://www.lovebeautyandplanet.com/content/dam/unilever/love_beauty_and_planet/united_states_of_america/pack_shot/coconut_mimosa_shampoo_bop-2079225-png.png"
+                                    alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Beauty & planet parfum</h3>
+                                <p>Les parfums et ouds orientaux les plus luxueux et les plus élégants qui ajoutent une
+                                    touche de beauté et d'élégance pour vous donner un look distingué</p>
+                                <a href="./product.html" class="order-now">Commandez maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <span class="price">350<span class="price-symbole">MAD</span></span>
+                                <img src="https://www.lovebeautyandplanet.com/content/dam/unilever/love_beauty_and_planet/united_states_of_america/pack_shot/coconut_mimosa_shampoo_bop-2079225-png.png"
+                                    alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Beauty & planet parfum</h3>
+                                <p>Les parfums et ouds orientaux les plus luxueux et les plus élégants qui ajoutent une
+                                    touche de beauté et d'élégance pour vous donner un look distingué</p>
+                                <a href="./product.html" class="order-now">Commandez maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <span class="price">350<span class="price-symbole">MAD</span></span>
+                                <img src="https://www.lovebeautyandplanet.com/content/dam/unilever/love_beauty_and_planet/united_states_of_america/pack_shot/coconut_mimosa_shampoo_bop-2079225-png.png"
+                                    alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Beauty & planet parfum</h3>
+                                <p>Les parfums et ouds orientaux les plus luxueux et les plus élégants qui ajoutent une
+                                    touche de beauté et d'élégance pour vous donner un look distingué</p>
+                                <a href="./product.html" class="order-now">Commandez maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="mega-menu">
+        <div class="container h-100">
+            <div class="row justify-content-center align-itme-center h-100">
+                <div class="col-auto text-center">
+                    <div class="mb-2"><a href="./index.html">Home</a></div>
+                    <div class="mb-2"><a href="./shop.html">Store</a></div>
+                    <div class="mb-2"><a href="./contact.html">Contact</a></div>
+                    <div class="mb-2"><a href="./login.html" class="login ms-2">Login</a></div>
+                    <div class="mb-2"><a href="./register.html" class="register ms-2">Register</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h2>Fakhaama</h2>
+                    <p>Du plus audacieux au plus doux et au plus subtil, nous avons quelque chose pour chaque
+                        personnalité et chaque occasion.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md text-center text-md-start"><span class="small">fakhaama.store 2023 tous les
+                        droits sont réservés</span></div>
+                <div class="col-12 col-md-auto text-center  text-md-end">
+                    <ul class="footer-links">
+                        <li><a href="./privacy.html" class="small ms-md-2">Les politiques de confidentialité</a></li>
+                        <li><a href="./terms.html" class="small ms-md-2">Termes et conditions</a></li>
+                        <li><a href="./faqs.html" class="small ms-md-2">FAQ/Aide</a></li>
+                        <li><a href="./shipping-and-returns.html" class="small ms-md-2">Expédition & retours</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script> -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
