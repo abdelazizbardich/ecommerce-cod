@@ -1,7 +1,10 @@
 const router = require('express').Router();
 
 router.get('/',(req,res)=>{
-    res.send('API OK!!!');
+    res.render('contact',{title:'contact'})
+});
+router.post('/',(req,res)=>{
+    res.render('contact',{title:'contact'})
 });
 
 

@@ -28,6 +28,10 @@ nav .container{
 nav.nav .logo{
     font-weight: bold;
 }
+nav.nav .logo a{
+    text-decoration: none;
+    color: inherit;
+}
 nav.nav ul{
     margin: 0;
     list-style: none;

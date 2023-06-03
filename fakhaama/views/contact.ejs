@@ -1,0 +1,50 @@
+<%- include('./includes/header',{title}) %>
+    <main>
+        <section class="lux">
+            <div class="banner mb-5">
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center">
+                            <h2>Fakhaama Contact</h2>
+                            <p>une symphonie parfumée d'élégance et d'opulence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container pb-2">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mb-5">
+                        <form action="/contact" method="post">
+                            <div class="row">
+                                <div class="mb-3 col-12">
+                                    <label for="name" class="form-label">Nom complet:</label>
+                                    <input type="text" name="name" class="form-control form-control-lg" id="name"
+                                        aria-describedby="name">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="phone" class="form-label">Téléphone:</label>
+                                    <input type="tel" name="phone" class="form-control form-control-lg" id="phone">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="email" class="form-label">Adresse e-mail:</label>
+                                    <input type="text" name="email" class="form-control form-control-lg" id="email">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="subject" class="form-label">Objet:</label>
+                                    <input type="text" name="subject" class="form-control form-control-lg" id="subject">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="message" class="form-label">Message:</label>
+                                    <textarea id="message" name="message" class="form-control form-control-lg" rows="5"></textarea>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <button type="submit" class="order-now w-100">Envoyer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include("./includes/footer") %>>

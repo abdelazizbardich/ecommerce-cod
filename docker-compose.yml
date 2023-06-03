@@ -1,0 +1,39 @@
+version: '3'
+services:
+  fakhaama:
+    container_name: fakhaama
+    build: './fakhaama'
+    image: fakhaama
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+    ports:
+      - 80:3000
+    depends_on:
+      database:
+          condition: service_healthy
+  database:
+    container_name: database
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: fakhaama
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: /usr/bin/pg_isready
+      interval: 5s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - ./database:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - database

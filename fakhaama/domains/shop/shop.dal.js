@@ -16,15 +16,10 @@ const deleteProduct = async (id) => {
     return await db.asyncQuery(`DELETE FROM products where id=${id}`);
 }
 
-const getProductsByCategory = async (id) => {
-    return await db.asyncQuery(`SELECT * FROM products WHERE category_id='${id}'`);
-}
-
 module.exports = {
     getProducts,
     getProduct,
     addProduct,
     updateProduct,
-    deleteProduct,
-    getProductsByCategory
+    deleteProduct
 }

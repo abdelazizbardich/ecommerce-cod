@@ -1,0 +1,101 @@
+<%- include('./includes/header',{title}) %>
+    <% if(products.slider.length){ %>
+        <header class="home-slider">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="order-md-1 order-2 col-md text-center text-md-start">
+                        <h1>
+                            <%= products.slider[0].title %>
+                        </h1>
+                        <p>
+                            <%= products.slider[0].description %>
+                        </p>
+                        <a href="/product/<%= products.slider[0].id %>" class="order-now">Commandez maintenant</a>
+                    </div>
+                    <div class="order-md-2 order-1 col-md mb-5 mb-md-0">
+                        <div class="slide">
+                            <img src="<%= products.slider[0].photo %>" alt="<%= products.slider[0].title %>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <% } %>
+            <main>
+                <section class="lux">
+                    <div class="container py-5">
+                        <div class="row justify-content-center">
+                            <div class="col-auto text-center">
+                                <h2>Parfums de Luxe</h2>
+                                <p>une symphonie parfumée d'élégance et d'opulence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container pb-2">
+                        <div class="row justify-content-center">
+                            <% products.featured.forEach(product=> { %>
+                                <div class="col-md-3 mb-5">
+                                    <div class="product-card">
+                                        <div class="thumbnail">
+                                            <span class="price"><%= product.price %><span class="price-symbole">MAD</span></span>
+                                            <img src="<%= product.photo%>"
+                                                alt="<%= product.title%>">
+                                        </div>
+                                        <div class="details">
+                                            <h3><%= product.title %></h3>
+                                            <p><%= product.description%></p>
+                                            <a href="/product/<%= product.id %>" class="order-now">Commandez maintenant</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                    <div class="container pb-5">
+                        <div class="row justify-content-center">
+                            <div class="col-auto text-center">
+                                <a href="/shop" class="order-now">Voir tous</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner"></section>
+                <section class="new">
+                    <div class="container py-5">
+                        <div class="row justify-content-center">
+                            <div class="col-auto text-center">
+                                <h2>Nouveaux arrivants</h2>
+                                <p>Parfums de Luxe: Nouveaux Rêves Olfactifs en Édition Prestigieuse</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container pb-2">
+                        <div class="row justify-content-center">
+                            <% products.products.forEach(product=> { %>
+                                <div class="col-md-3 mb-5">
+                                    <div class="product-card">
+                                        <div class="thumbnail">
+                                            <span class="price"><%= product.price %><span class="price-symbole">MAD</span></span>
+                                            <img src="<%= product.photo%>"
+                                                alt="<%= product.title%>">
+                                        </div>
+                                        <div class="details">
+                                            <h3><%= product.title %></h3>
+                                            <p><%= product.description%></p>
+                                            <a href="/product/<%= product.id %>" class="order-now">Commandez maintenant</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                    <div class="container pb-5">
+                        <div class="row justify-content-center">
+                            <div class="col-auto text-center">
+                                <a href="/shop" class="order-now">Voir tous</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <%- include("./includes/footer") %>>

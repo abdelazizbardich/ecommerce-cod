@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-router.get('/',(req,res)=>{
-    res.send('API OK!!!');
+router.post('/',(req,res)=>{
+    res.render('order-confirm',{title:'order registred'})
 });
 
 
