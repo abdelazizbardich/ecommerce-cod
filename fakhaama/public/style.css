@@ -189,6 +189,9 @@ nav .actions ul li a.close-menu:hover{
 .banner{
     background-color: #f5c977;
     min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer{
     background-color: #f5c977;
