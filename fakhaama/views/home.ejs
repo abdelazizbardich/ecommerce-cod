@@ -33,7 +33,7 @@
                     </div>
                     <div class="container pb-2">
                         <div class="row justify-content-center">
-                            <% products.featured.forEach(product=> { %>
+                            <% products.featured.slice(0,12).forEach(product=> { %>
                                 <div class="col-md-3 mb-5">
                                     <div class="product-card">
                                         <div class="thumbnail">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="container pb-2">
                         <div class="row justify-content-center">
-                            <% products.products.forEach(product=> { %>
+                            <% products.products.slice(0,12).forEach(product=> { %>
                                 <div class="col-md-3 mb-5">
                                     <div class="product-card">
                                         <div class="thumbnail">

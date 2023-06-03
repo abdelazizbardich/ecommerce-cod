@@ -1,7 +1,14 @@
 const router = require('express').Router();
+const orderService = require('./orders.service');
 
-router.post('/',(req,res)=>{
-    res.render('order-confirm',{title:'order registred'})
+router.post('/', async (req,res)=>{
+    try {
+        const order = req.body;
+        await orderService.addOrder(order);
+        res.render('order-confirm',{title:'order registred'})
+    } catch (error) {
+        console.log('error',error);
+    }
 });
 
 
