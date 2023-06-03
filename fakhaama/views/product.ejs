@@ -18,7 +18,7 @@
                     <div class="col-md-6 mb-5">
                         <div class="product-card">
                             <div class="thumbnail p-0 m-0">
-                                <img src="https://www.lovebeautyandplanet.com/content/dam/unilever/love_beauty_and_planet/united_states_of_america/pack_shot/coconut_mimosa_shampoo_bop-2079225-png.png"
+                                <img src="/static/products/<%= product.photo %>"
                                     alt="">
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                     <span class="price">
                                         <%= product.price %><span class="price-symbole">MAD</span>
                                     </span>
-                                    <img src="<%= product.photo%>" alt="<%= product.title%>">
+                                    <img src="/static/products/<%= product.photo%>" alt="<%= product.title%>">
                                 </div>
                                 <div class="details">
                                     <h3>
