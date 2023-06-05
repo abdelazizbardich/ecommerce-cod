@@ -17,8 +17,8 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
       POSTGRES_DB: fakhaama
     ports:
       - 5432:5432
