@@ -8,6 +8,7 @@ const router = require('./app.routes');
 
 app.use(function (req, res, next) {
     res.locals = {
+        storageUrl:process.env.STORAGE_URL + ':' + process.env.STORAGE_PORT,
         storage: (url, type) => {
             if (type == 'public') {
                 return process.env.STORAGE_URL + ':' + process.env.STORAGE_PORT + '/public/' + url;

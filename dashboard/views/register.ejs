@@ -1,0 +1,49 @@
+<%- include('./includes/header',{title}) %>
+    <main>
+        <section class="lux">
+            <div class="banner mb-5">
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center">
+                            <h2>Fakhaama Register</h2>
+                            <p>une symphonie parfumée d'élégance et d'opulence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container pb-2">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mb-5">
+                        <form action="#">
+                            <div class="row">
+                                <div class="mb-3 col-6">
+                                    <label for="first_name" class="form-label">Nom:</label>
+                                    <input type="text" class="form-control form-control-lg" id="first_name">
+                                </div>
+                                <div class="mb-3 col-6">
+                                    <label for="last_name" class="form-label">Prénom:</label>
+                                    <input type="text" class="form-control form-control-lg" id="last_name">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="email" class="form-label">Adresse e-mail:</label>
+                                    <input type="email" class="form-control form-control-lg" id="email">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="password" class="form-label">Mot de passe:</label>
+                                    <input type="oassword" class="form-control form-control-lg" id="password">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="password-conf" class="form-label">Confirmer le mot de passe:</label>
+                                    <input type="password" class="form-control form-control-lg" id="password-conf">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <button type="submit" class="order-now w-100">S'inscrire</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include("./includes/footer") %>

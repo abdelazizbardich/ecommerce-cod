@@ -7,11 +7,47 @@ services:
     environment:
       DB_HOST: database
       DB_PORT: 5432
+      DB_NAME: fakhaama
+      DB_USER: root
+      DB_PASSWORD: root
+      STORAGE_API_KEY: $2y$10$r/lSPkvm3my/Hg0fn1ADO.0S.lIP7C3xydWsAsTt/fY/7.qozk/su
+      STORAGE_URL: storage
+      STORAGE_PORT: 9090
     ports:
       - 80:3000
     depends_on:
       database:
-          condition: service_healthy
+        condition: service_healthy
+
+  dashboard:
+    container_name: dashboard
+    build: './dashboard'
+    image: dashboard
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_NAME: fakhaama
+      DB_USER: root
+      DB_PASSWORD: root
+    ports:
+      - 9000:9000
+    depends_on:
+      database:
+        condition: service_healthy
+
+  storage:
+    container_name: storage
+    build: './storage'
+    image: storage
+    environment:
+      PORT: 9090
+      KEY: $2y$10$r/lSPkvm3my/Hg0fn1ADO.0S.lIP7C3xydWsAsTt/fY/7.qozk/su
+    ports:
+      - 9090:9090
+    depends_on:
+      database:
+        condition: service_healthy
+
   database:
     container_name: database
     image: postgres

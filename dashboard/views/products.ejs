@@ -1,0 +1,122 @@
+<%- include('./includes/header',{title}) %>
+    <main>
+        <div class="container-fluid py-5">
+            <div class="row mb-2">
+                <div class="col"></div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#newProduct">New products</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto">
+                    <div class="card">
+                        <div class="title">
+                            Products
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <th>Title</th>
+                                        <!-- <th>Description</th> -->
+                                        <th>Price</th>
+                                        <th>Photo</th>
+                                        <!-- <th>Full description</th> -->
+                                        <th>Category</th>
+                                        <th>Is featured</th>
+                                        <th>Is in slider</th>
+                                    </thead>
+                                    <tbody>
+                                        <% products.forEach((product)=> { %>
+                                            <tr class="small">
+                                                <td>
+                                                    <%= product.title %>
+                                                </td>
+                                                <!-- <td><%= product.description %></td> -->
+                                                <td><span class="text-danger">
+                                                        <%= product.price %>$
+                                                    </span></td>
+                                                <td><img width="30" src="<%= storage(product.photo,'public') %>"
+                                                        alt="<%= product.title %>"></td>
+                                                <!-- <td><%= product.full_description %></td> -->
+                                                <td>
+                                                    <%= product.name %>
+                                                </td>
+                                                <td>
+                                                    <% if(product.is_featured){ %>
+                                                        <i class="fa-solid fa-circle-check text-success"></i>
+                                                        <% }else{ %>
+                                                            <i class="fa-solid fa-circle-xmark text-danger"></i>
+                                                            <% } %>
+                                                </td>
+                                                <td>
+                                                    <% if(product.is_in_slider){ %>
+                                                        <i class="fa-solid fa-circle-check text-success"></i>
+                                                        <% }else{ %>
+                                                            <i class="fa-solid fa-circle-xmark text-danger"></i>
+                                                            <% } %>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="newProduct" tabindex="-1" aria-labelledby="newProductLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newProductLabel">New product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="/products" method="post">
+                    <div class="modal-body">
+                        <div class="form-group mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" name="title" id="title" class="form-control">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="price" class="form-label">Price:</label>
+                            <input type="number" name="price" id="price" class="form-control">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="photo" class="form-label">Photo</label>
+                            <input type="file" onchange="uploadImage(event)" data-target="photo" class="form-control">
+                            <input type="text" id="photo" name="photo" hidden>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="category" class="form-label">Category</label>
+                            <select name="category" id="category" class="form-select form-control">
+                                <option value="">Category... </option>
+                                <% categories.forEach(category=> { %>
+                                    <option value="<%= category.id %>">
+                                        <%= category.name %>
+                                    </option>
+                                    <% }); %>
+                            </select>
+                        </div>
+                        <div class="form-group form-check mb-3">
+                            <label for="isfeatured" class="form-check-label">Is featured</label>
+                            <input type="checkbox" name="is_featured" id="isfeatured" class="form-check-input">
+                        </div>
+                        <div class="form-group form-check mb-3">
+                            <label for="inslider" class="form-check-label">In slider</label>
+                            <input type="checkbox" name="in_slider" id="inslider" class="form-check-input">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include("./includes/footer") %>

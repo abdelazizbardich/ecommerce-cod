@@ -6,7 +6,7 @@ const ordersApi = require('./domains/orders/orders.api');
 const reviewsApi = require('./domains/reviews/reviews.api');
 const categoriesApi = require('./domains/categories/categories.api');
 const shopApi = require('./domains/shop/shop.api');
-const homeApi = require('./domains/home/home.api')
+const homeApi = require('./domains/home/home.api');
 
 
 router.use('/product', productApi);

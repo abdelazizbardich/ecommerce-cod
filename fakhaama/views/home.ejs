@@ -14,7 +14,7 @@
                     </div>
                     <div class="order-md-2 order-1 col-md mb-5 mb-md-0">
                         <div class="slide">
-                            <img src="/static/products/<%= products.slider[0].photo %>"
+                            <img src="<%= storage(products.slider[0].photo,'public') %>"
                                 alt="<%= products.slider[0].title %>">
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                                             <span class="price">
                                                 <%= product.price %><span class="price-symbole">MAD</span>
                                             </span>
-                                            <img src="/static/products/<%= product.photo%>" alt="<%= product.title%>">
+                                            <img src="<%= storage(product.photo,'public') %>" alt="<%= product.title%>">
                                         </div>
                                         <div class="details">
                                             <h3>
@@ -88,7 +88,7 @@
                                                 <span class="price">
                                                     <%= product.price %><span class="price-symbole">MAD</span>
                                                 </span>
-                                                <img src="/static/products/<%= product.photo%>"
+                                                <img src="<%= storage(product.photo,'public') %>"
                                                     alt="<%= product.title%>">
                                             </div>
                                             <div class="details">

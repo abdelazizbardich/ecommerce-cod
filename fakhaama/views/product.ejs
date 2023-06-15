@@ -18,7 +18,7 @@
                     <div class="col-md-6 mb-5">
                         <div class="product-card">
                             <div class="thumbnail p-0 m-0">
-                                <img src="/static/products/<%= product.photo %>"
+                                <img src="<%= storage(product.photo,'public') %>"
                                     alt="">
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                     <span class="price">
                                         <%= product.price %><span class="price-symbole">MAD</span>
                                     </span>
-                                    <img src="/static/products/<%= product.photo%>" alt="<%= product.title%>">
+                                    <img src="<%= storage(product.photo,'public') %>" alt="<%= product.title%>">
                                 </div>
                                 <div class="details">
                                     <h3>

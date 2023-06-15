@@ -12,6 +12,12 @@ body{
     font-size: 100%;
     overflow-x: hidden;
 }
+svg{
+    fill: #8d7342;
+    width: 20px;
+    height: 20px;
+    margin: .5rem;
+}
 nav.nav{
     background-color: #ffffff;
     width: 100%;
@@ -146,6 +152,9 @@ nav .actions ul li a.close-menu:hover{
     aspect-ratio: 1/1;
     margin-bottom: 16px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .product-card .thumbnail img{
     max-height: 100%;
@@ -314,4 +323,55 @@ footer{
 @keyframes animateProduct {
     from {transform: translateX(-50%) translateY(-50%) rotateZ(5deg);}
     to {transform: translateX(-50%) translateY(-49%) rotateZ(-5deg);}
+}
+
+
+
+/*
+Admin Styles
+*/
+.side-bar{
+    height: 100vh;
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+.side-bar .profile{
+    padding: 1rem;
+    position: relative;
+}
+.side-bar .profile::after{
+    content: '';
+    width: 70%;
+    height: 1px;
+    background: rgb(0 0 0 / 10%);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.side-bar .profile .name{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+.side-bar .profile .email{
+    font-size: .7rem;
+    text-transform: lowercase;
+    text-align: center;
+    width: 100%;
+}
+.side-bar ul{
+    padding: 0;
+    list-style: none;
+}
+.side-bar ul li a{
+    padding: 1.5rem 2rem;
+    padding-left: .5rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.3rem;
+}
+.side-bar ul li a:hover{
+    background-color: #f5c977;
 }

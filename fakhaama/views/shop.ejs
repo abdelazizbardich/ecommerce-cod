@@ -18,7 +18,7 @@
                             <div class="product-card">
                                 <div class="thumbnail">
                                     <span class="price"><%= product.price %><span class="price-symbole">MAD</span></span>
-                                    <img src="/static/products/<%= product.photo %>"
+                                    <img src="<%= storage(product.photo,'public') %>"
                                         alt="<%= product.title %>">
                                 </div>
                                 <div class="details">
